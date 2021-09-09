@@ -1,9 +1,11 @@
 <p>Select a cookie from the drop down</p>
 <select [(ngModel)]="selectedCookie">
-  <!-- option *ngFor="let cookie of cookiesListvar" [ngValue]="cookie" >{{ cookie.name }}</option>
+ <option *ngFor="let cookie of cookieListvar" [ngValue]="cookie" >{{ cookie.name }}</option>
 </select>
-<app-cookie-view [cookieListvar] = ""></app-cookie-view> -->
-</select>
+<!--<app-cookie-view [cookieListvar] = ""></app-cookie-view> -->
+
 
 <p>Display the cookies colour</p>
 <select [(ngModel)]="selectedCookie">
+<option *ngFor="let cookie of cookieListvar" [ngValue]="cookie" >{{ cookie.colour }}</option>
+</select>
