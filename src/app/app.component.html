@@ -1,3 +1,4 @@
+<h3>
 <p>Select a cookie from the drop down</p>
 <select [(ngModel)]="selectedCookie">
  <option *ngFor="let cookie of cookieListvar" [ngValue]="cookie" >{{ cookie.name }}</option>
@@ -9,3 +10,28 @@
 <select [(ngModel)]="selectedCookie">
 <option *ngFor="let cookie of cookieListvar" [ngValue]="cookie" >{{ cookie.colour }}</option>
 </select>
+
+<p>Create a new Cookie</p>
+<label>Enter the name</label>
+<input id="addName" type="text">
+<br>
+<label>Enter the colour</label>
+<input id="addColour" type="text">
+<br>
+<button (click)="createCookie()">Create Cookie and add to list</button>
+
+
+
+
+
+
+
+
+
+<!--<label>Name: </label>
+<input [(ngModel)]="addNewCookie.name" type="text" />
+
+<br>
+
+<label>Image: </label>
+<input [(ngModel)]="addNewCookie.colour" type="text" /> -->

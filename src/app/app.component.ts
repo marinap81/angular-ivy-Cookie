@@ -23,7 +23,14 @@ export class AppComponent implements OnInit {
   ];
   selectedCookie: Cookie; //used to display the cookie property in select box
 
+  //addNewCookie: Cookie = { name: '', colour: '' };//initialised but has error
+
   ngOnInit() {
     this.selectedCookie = this.cookieListvar[0];
   }
+
+  createCookie() {
+    
+   // this.cookieListvar.push({ ...this.addNewCookie });
+  } 
 }
