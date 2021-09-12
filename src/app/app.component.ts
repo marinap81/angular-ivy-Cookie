@@ -10,6 +10,10 @@ import { Colours } from './models/Colours.enum';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent implements OnInit {
+  public Colours = Colours;
+  nameNewCookie: string;
+  newCookieColour: Colours;
+
   cookieListvar: Cookie[] = [
     {
       name: 'Marshmallow',
@@ -18,19 +22,20 @@ export class AppComponent implements OnInit {
 
     {
       name: 'Rockyroad',
-      colour: Colours.BROWN
+      colour: Colours.BLUE
     }
   ];
   selectedCookie: Cookie; //used to display the cookie property in select box
-
-  //addNewCookie: Cookie = { name: '', colour: '' };//initialised but has error
 
   ngOnInit() {
     this.selectedCookie = this.cookieListvar[0];
   }
 
   createCookie() {
-    
-   // this.cookieListvar.push({ ...this.addNewCookie });
-  } 
+    this.cookieListvar.push(
+      new Cookie(this.nameNewCookie, this.newCookieColour)
+    ); //initialised but has error
+
+    // this.cookieListvar.push({ ...this.addNewCookie });
+  }
 }
